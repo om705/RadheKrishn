@@ -25,9 +25,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6896439329:AAFSJV97z7zzot3wmJUVi7uwLO9p2UW7lSU",
-             api_id= 25703106,
-             api_hash= "75cb4ce927cd3da265bbf86942c371f9")
+             bot_token= "6634284648:AAFQ2wVSiMRVrtpSIrJGl4OpkF6e1Z4bjYw",
+             api_id= 22114233,
+             api_hash= "d7abcec5c967414fadb1d438fa05ebea")
 
 
 @bot.on_message(filters.command(["radheradhe"]) & filters.user(ADMINS))
@@ -47,7 +47,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1001862137917, x)
+        await bot.send_document(-1002018140232, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -177,7 +177,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1001959626940)
+                        await copy.copy(chat_id =-1002128749831)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -191,7 +191,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1001959626940)
+                        await copy.copy(chat_id = -1002128749831)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
@@ -221,7 +221,7 @@ async def vision_pdf(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if 2 + 2 == 4: #hehe
         x = await input.download()
-        await bot.send_document(-1001862137917, x)
+        await bot.send_document(-1002018140232, x)
         await input.delete(True)
 
         path = f"./downloads/{m.chat.id}"
@@ -267,7 +267,7 @@ async def vision_pdf(bot: Client, m: Message):
             cc = f' {name}.pdf\n\nBatch: {raw_text6}\nDownloaded by » {raw_text7}\n\n**Bot Made By:- Gokul Vasi'
             ka = await helper.vision(url, name, cookies)
             copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc)
-            await copy.copy(chat_id = -1001959626940)
+            await copy.copy(chat_id = -1002128749831)
             count += 1
             os.remove(ka)
             time.sleep(2)
